@@ -1,0 +1,17 @@
+<div class="wel">
+    <div class="container" id="details-dialog-content">
+      <h2 mat-dialog-title class="title">Event Details</h2>
+      <mat-dialog-content>
+        <p>ID: {{ data.id }}</p>
+        <p>Nom Event: {{ data.title }}</p>
+        <p>Location: {{ data.location }}</p>
+        <p>Event Start: {{ data.startTime | date:'dd/MM/yyyy HH:mm a':'UTC' }}</p>
+        <p>Event End: {{ data.endTime | date:'dd/MM/yyyy HH:mm a':'UTC' }}</p>
+      </mat-dialog-content>
+      <div mat-dialog-actions class="main">
+        <button mat-button class="hi" (click)="onDownloadClick()">Download</button>
+        <button mat-button class="hello" (click)="onCloseClick()">Close</button>
+      </div>
+    </div>
+  </div>
+  

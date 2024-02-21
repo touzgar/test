@@ -1,0 +1,15 @@
+<div class="wel">
+    <div class="container" id="details-dialog-content">
+      <h2 mat-dialog-title class="title">Employee Details</h2>
+      <mat-dialog-content>
+        <p>ID: {{ data.idSalle }}</p>
+        <p>Name: {{ data.salleName }}</p>
+        <p>Email: {{ data.capacity }}</p>
+        </mat-dialog-content>
+      <div mat-dialog-actions class="main">
+        <button mat-button class="hi" (click)="onDownloadClick()">Download</button>
+        <button mat-button class="hello" (click)="onCloseClick()">Close</button>
+      </div>
+    </div>
+  </div>
+  

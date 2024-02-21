@@ -1,0 +1,23 @@
+<div class="container">
+    <div>
+        <h2>Ajouter une Salle</h2>
+    </div>
+    <form  #eventForm="ngForm" (ngSubmit)="addSalle()">
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Salle</label>
+            <input readonly type="text" [(ngModel)]="salle.idSalle" name="idSalle" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Salle</label>
+            <input type="text"[(ngModel)]="salle.salleName" name="salleName" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Capacity Salle</label>
+            <input type="number" [(ngModel)]="salle.capacity" name="capacity" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit" class="neon-button">Ajouter</button>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,28 @@
+<!-- new-event-dialog.component.html -->
+<div class="container">
+  <h1 class="label">New Event Form</h1>
+    
+
+  <form autocomplete="off">
+    <mat-form-field>
+      <input matInput placeholder="Enter event title" [(ngModel)]="event.title" name="title">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input required matInput placeholder="Enter room name" [(ngModel)]="event.location" name="location">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input required matInput type="datetime-local" [(ngModel)]="event.startTime" name="startTime">
+    </mat-form-field>
+    <mat-form-field>
+      <input required matInput type="datetime-local" [(ngModel)]="event.endTime" name="endTime">
+    </mat-form-field>
+
+    <!-- Add more form elements as needed -->
+    <div mat-dialog-actions class="main">
+      <button class="hi" mat-button (click)="saveEvent()">Save</button>
+      <button class="hello" mat-button (click)="closeDialog()">Close</button>
+    </div>
+  </form>
+</div>

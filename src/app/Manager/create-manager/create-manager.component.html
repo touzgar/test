@@ -1,0 +1,22 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Manager</h2>
+    </div>
+    <form autocomplete="off"  #eventForm="ngForm" (ngSubmit)="addManager()">
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Event</label>
+            <input readonly type="text" [(ngModel)]="manager.idManager" name="idManager" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Manager</label>
+            <input required type="text" [(ngModel)]="manager.nameManager" name="nameManager" class="form-control" [placeholder]="valuer">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Email Manager</label>
+            <input type="email" required [(ngModel)]="manager.mailManager" name="mailManager" class="form-control" [placeholder]="value">
+        </div>
+        <div class="mt-2">
+            <button type="submit" class="neon-button" [disabled]="!eventForm.form.valid">Ajouter</button>
+        </div>
+    </form>
+</div>

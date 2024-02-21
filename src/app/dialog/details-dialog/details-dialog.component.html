@@ -1,0 +1,17 @@
+<div class="wel">
+    <div class="container" id="details-dialog-content">
+      <h2 mat-dialog-title class="title">Employee Details</h2>
+      <mat-dialog-content>
+        <p>ID: {{ data.idEmp }}</p>
+        <p>Name: {{ data.nameEmp }}</p>
+        <p>Email: {{ data.email }}</p>
+        <p>Available Time Start: {{ data.availbility_start_time | date:'dd/MM/yyyy HH:mm a':'UTC' }}</p>
+        <p>Available Time End: {{ data.availbility_end_time | date:'dd/MM/yyyy HH:mm a':'UTC' }}</p>
+      </mat-dialog-content>
+      <div mat-dialog-actions class="main">
+        <button mat-button class="hi" (click)="onDownloadClick()">Download</button>
+        <button mat-button class="hello" (click)="onCloseClick()">Close</button>
+      </div>
+    </div>
+  </div>
+  

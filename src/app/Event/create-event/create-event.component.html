@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Event</h2>
+    </div>
+    <form  #eventForm="ngForm" (ngSubmit)="addEvent()">
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Event</label>
+            <input readonly type="text" [(ngModel)]="event.id" name="id" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Event</label>
+            <input type="text"[(ngModel)]="event.title" name="title" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Location</label>
+            <input type="text" [(ngModel)]="event.location" name="location" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date Start</label>
+            <input type="datetime-local" [(ngModel)]="event.startTime" name="startTime" class="form-control">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Date End</label>
+            <input type="datetime-local" [(ngModel)]="event.endTime" name="endTime" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit" class="neon-button">Ajouter</button>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Empolyer</h2>
+    </div>
+    <form  #eventForm="ngForm" (ngSubmit)="addEmpolyer()">
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Empolyer</label>
+            <input readonly type="text" [(ngModel)]="empolyer.idEmp" name="idEmp" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Empolyer</label>
+            <input type="text"[(ngModel)]="empolyer.nameEmp" name="nameEmp" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Email Empolyer</label>
+            <input type="email"  [(ngModel)]="empolyer.email" name="email" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Avaible Start Time</label>
+            <input type="datetime-local" [(ngModel)]="empolyer.availbility_start_time" name="availbility_start_time" class="form-control">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Avaible End Time</label>
+            <input type="datetime-local" [(ngModel)]="empolyer.availbility_end_time" name="availbility_end_time" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit" class="neon-button">Ajouter</button>
+        </div>
+
+    </form>
+</div>

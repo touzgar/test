@@ -1,0 +1,26 @@
+<!-- test.component.html -->
+
+<h1>Contact us</h1>
+<br>
+<div class="container">
+    <label>Name 1</label>
+    <br>
+    <input type="text">
+    <br>
+    <label>Name 2</label>
+    <br>
+    <input type="text">
+    <br>
+    <label>Name 3</label>
+    <br>
+    <input type="text">
+    <br>
+    <label>Email</label>
+    <br>
+    <input type="email" [placeholder]="value">
+</div>
+<div>
+    <button type="submit" (click)="message()">Hello</button>
+    <!-- Display the message text -->
+    <p>{{ messageText }}</p>
+</div>

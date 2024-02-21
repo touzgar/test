@@ -1,0 +1,82 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .form-inline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .form-control {
+    all: unset;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .label {
+    position: absolute;
+    font-size: 17px;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .form-control:focus + .label,
+  .form-control:not(:placeholder-shown) + .label {
+    transform: translateY(-120%) scale(0.7);
+    background-color: #fff;
+    padding-inline: 0.3rem;
+    color: #226951;
+  }
+  
+ /* Set background color for even and odd rows in the table body */
+.table tbody tr:nth-child(even) {
+    background-color: #212529; /* Dark background color for even rows */
+  }
+  
+  .table tbody tr:nth-child(odd) {
+    background-color: #343a40; /* Slightly lighter background color for odd rows */
+  }
+  
+  /* Style for td elements */
+  .table td {
+    color: black;
+    padding: 12px;
+  }
+  
+  /* Hover effect on td elements */
+  .table tbody tr:hover td {
+    background-color: #28a745; /* Green background color on hover */
+    color: #fff;
+  }
+  
+  /* Style for th elements */
+  .table th {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Hover effect on th elements */
+  .table th:hover {
+    background-color: #28a745; /* Green background color on hover */
+    color: #fff;
+  }
+  
+  .card {
+    margin-top: 100px;
+    background-color: gainsboro;
+  }
+  

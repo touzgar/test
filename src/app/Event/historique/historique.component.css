@@ -1,0 +1,113 @@
+/* Neon button style */
+.neon-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #212529, #343a40); /* Match the table row colors */
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px; /* Adjusted border-radius for a more subtle look */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .neon-button:hover {
+    animation: glow 2s linear infinite;
+  }
+  
+  /* Glow animation */
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 20px rgba(18, 194, 233, 0.7), 0 0 20px rgba(196, 113, 237, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(246, 97, 89, 0.7), 0 0 20px rgba(81, 224, 210, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(18, 194, 233, 0.7), 0 0 20px rgba(196, 113, 237, 0.7);
+    }
+  }
+  
+  /* Set background color for even and odd rows in the table body */
+  .table tbody tr:nth-child(even) {
+    background-color: #212529; /* Dark background color for even rows */
+  }
+  
+  .table tbody tr:nth-child(odd) {
+    background-color: #343a40; /* Slightly lighter background color for odd rows */
+  }
+  
+  /* Style for td elements */
+  .table td {
+    color: black;
+    padding: 12px;
+  }
+  
+  /* Hover effect on td elements */
+  .table tbody tr:hover td {
+    background-color: #28a745; /* Green background color on hover */
+    color: #fff;
+  }
+  
+  /* Style for th elements */
+  .table th {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Hover effect on th elements */
+  .table th:hover {
+    background-color: #28a745; /* Green background color on hover */
+    color: #fff;
+  }
+  
+  .card {
+    margin-top: 100px;
+    background-color: gainsboro;
+  }
+  .form-inline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .form-control {
+    all: unset;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .label {
+    position: absolute;
+    font-size: 17px;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform:;
+    -moz-transform:;
+    -ms-transform:;
+    -o-transform:;
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
+}
+  
+  .form-control:focus + .label,
+  .form-control:not(:placeholder-shown) + .label {
+    transform: translateY(-120%) scale(0.7);
+    background-color: #fff;
+    padding-inline: 0.3rem;
+    color: #226951;
+  }
+  
+  

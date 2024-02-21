@@ -1,0 +1,25 @@
+<div class="container">
+    <div>
+        <h2>Modifier un Manager</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Manager</label>
+            <input readonly  [(ngModel)]="currentManager.idManager" type="text"  name="idManager" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Manager</label>
+            <input type="text" [(ngModel)]="currentManager.nameManager"  name="nameManager" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Email Manager</label>
+            <input type="email" [(ngModel)]="currentManager.mailManager"   name="mailManager" class="form-control">
+        </div>
+        
+        <div class="mt-2">
+            <button type="submit" (click)="modifierManager()" class="neon-button">Modifier</button>
+        </div> 
+
+
+            </form>
+</div>

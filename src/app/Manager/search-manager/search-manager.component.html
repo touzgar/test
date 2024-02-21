@@ -1,0 +1,34 @@
+<form autocomplete="off" class="form-inline" >
+    <div class="form-group mx-sm-3 mb-2 mt-2">
+        <input class="form-control" (keyup)="onkeyUp(searchTerm.value)" #searchTerm id="nomManager" placeholder="">
+        <label class="label" for="nomManager" ><i class="fa fa-search" aria-hidden="true"></i>Nom Manager</label>
+                 
+        
+    </div>
+</form>
+<div class="container">
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id Manager</th>
+                        <th>Nom Manager</th>
+                        <th>Email Manager</th>
+                        
+                    </tr>
+                </thead>
+                <tbody >
+                  <tr *ngFor="let mag of managers">
+                      <td>{{ mag.idManager }}</td>
+                      <td>{{ mag.nameManager }}</td>
+                      <td>{{ mag.mailManager }}</td>
+                     
+                        
+</tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

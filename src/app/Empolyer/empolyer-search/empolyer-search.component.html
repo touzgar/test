@@ -1,0 +1,38 @@
+<form autocomplete="off" class="form-inline" >
+    <div class="form-group mx-sm-3 mb-2 mt-2">
+        <input class="form-control" (keyup)="onkeyUp(searchTerm.value)" #searchTerm id="nomEmpolyer" placeholder="">
+        <label class="label" for="nomEmpolyer" ><i class="fa fa-search" aria-hidden="true"></i>Nom Empolyer</label>
+                 
+        
+    </div>
+</form>
+<div class="container">
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nom Empolyer</th>
+                        <th>Email</th>
+                        <th>Avaible Start Time</th>
+                        <th>Avaible End Time</th>
+                       
+                    </tr>
+                </thead>
+                <tbody >
+                  <tr *ngFor="let emp of empolyers">
+                    <td>{{ emp.idEmp }}</td>
+                    <td>{{ emp.nameEmp }}</td>
+                    <td>{{ emp.email }}</td>
+                    <td>{{ emp.availbility_start_time | date:'dd/MM/yyyy HH:mm a':'UTC' }}</td>
+                    <td>{{ emp.availbility_end_time | date:'dd/MM/yyyy HH:mm a':'UTC' }}</td>
+                    
+                        
+</tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

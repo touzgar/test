@@ -1,0 +1,69 @@
+/* Add these styles to your app.component.css file or equivalent */
+
+/* Navbar styles */
+.navbar {
+    background-color: #343a40; /* Dark background color */
+  }
+  
+  .navbar-brand {
+    color: #ffffff; /* White text color for brand */
+  }
+  
+  .navbar-nav .nav-item {
+    margin-right: 10px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #ffffff; /* White text color for links */
+    transition: color 0.3s ease; /* Smooth transition for link color */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #28a745; /* Change link color on hover */
+  }
+  
+  /* Dropdown styles */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    /*Showdropdownonhover*/transition: max-height 0.3s ease;
+    /*Settransitiondurationto0.5seconds*/max-height: 500px;
+    
+}
+  
+  .dropdown-menu {
+    background-color: #343a40;
+    /*Darkbackgroundcolorfordropdown*/max-width: 200px;
+    overflow: hidden;
+    max-height: 0;
+    /*Setinitialmax-heightto0*/transition: max-height 0.3s ease;
+     }
+  
+  .dropdown-item {
+    color: #ffffff; /* White text color for dropdown items */
+    transition: background-color 0.3s ease;
+    padding: 8px 16px; /* Smooth transition for item background color */
+  }
+  
+  .dropdown-item:hover {
+    background-color: #28a745; /* Change item background color on hover */
+    color: #ffffff; /* Change text color on hover */
+  }
+  a{
+    cursor: pointer;
+  }
+  
+  .navbar-nav .nav-item.dropdown .nav-link::after {
+    display: none;
+  }
+  
+  /* Add this CSS to your app.component.css file or equivalent */
+  
+  .navbar-nav .nav-item.dropdown {
+    margin-right: 20px; /* Adjust the margin to increase or decrease the spacing */
+  }
+  
+  /* Optionally, you can add some margin to the right of the last dropdown to avoid extra spacing */
+  .navbar-nav .nav-item.dropdown:last-child {
+    margin-right: 0;
+  }
+  

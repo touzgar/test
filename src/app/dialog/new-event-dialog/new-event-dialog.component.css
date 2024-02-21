@@ -1,0 +1,74 @@
+/* Add this to your component's CSS file (e.g., new-event-dialog.component.css) */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Add more styles as needed */
+  
+  .label {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  /* Styling for buttons with specific classes */
+  .hi,
+  .hello {
+    background-color: #28a745; /* Default color for .hi */
+    border: none;
+    border-radius: 25px;
+    color: aliceblue;
+    padding: 7px 30px;
+    cursor: pointer;
+  }
+  
+  .hello {
+    background-color: red;
+    margin-right: 20px;
+  }
+  
+  /* Hover effect for buttons */
+  .hi:hover,
+  .hello:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Main container styles */
+  .main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.5s; /* Fix transition property */
+  }
+  
+  /* Optional: Add background color to the main container */
+  .container {
+    background-color: gainsboro;
+    border-radius: 10px; /* Add border-radius for a rounded container */
+  }
+  
+  /* Add this to your global styles or the component's styles */
+  .custom-dialog-container {
+    background-color: black;
+    color: white; /* Set the text color to make it readable on a black background */
+  }
+  
+  /* Adjust form layout for smaller screens */
+  @media (max-width: 600px) {
+    form {
+      padding: 5px;
+    }
+  
+    /* Adjust other styles for smaller screens if needed */
+  }
+  

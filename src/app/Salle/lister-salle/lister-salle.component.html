@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <table class="table table-striped table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Nom Salle</th>
+              <th scope="col">Capacity</th>
+              <th scope="col">Action</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let salle of salles">
+              <td>{{ salle.idSalle }}</td>
+              <td>{{ salle.salleName }}</td>
+              <td>{{ salle.capacity }}</td>
+              <td>
+                <div class="button-container">
+             
+                <button class="neon-button" (click)="showDetails(salle)">Details</button>
+                <button class="neon-button" (click)="deleteSalle(salle)">Supprimer</button>
+                <button class="neon-button" [routerLink]="['/modifier-salle', salle.idSalle]">Modifier</button>
+                </div>   
+              </td>
+             
+             
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

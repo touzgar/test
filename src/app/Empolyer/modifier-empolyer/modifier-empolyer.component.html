@@ -1,0 +1,35 @@
+<div class="container">
+    <div>
+        <h2>Modifier un Empolyer</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Event</label>
+            <input readonly  [(ngModel)]="currentEmpolyer.idEmp" type="text"  name="idEmp" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Event</label>
+            <input type="text" [(ngModel)]="currentEmpolyer.nameEmp"  name="nameEmp" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Location</label>
+            <input type="text" [(ngModel)]="currentEmpolyer.email"  name="email" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date Start</label>
+            <input type="datetime"  [ngModel]="currentEmpolyer.availbility_start_time | date:'yyyy-MM-dd HH:mm a':'UTC'"
+            (ngModelChange)="currentEmpolyer.availbility_start_time=$event"   name="availbility_start_time" class="form-control">
+        </div>
+        
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Date End</label>
+            <input type="datetime"  [ngModel]="currentEmpolyer.availbility_end_time | date:'yyyy-MM-dd HH:mm a':'UTC'"
+            (ngModelChange)="currentEmpolyer.availbility_end_time=$event"  name="availbility_end_time" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="modifierEmpolyer()" class="neon-button">Modifier</button>
+        </div> 
+
+
+            </form>
+</div>

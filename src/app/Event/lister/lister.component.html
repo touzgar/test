@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nom Event</th>
+            <th scope="col">Location</th>
+            <th scope="col">Event Start</th>
+            <th scope="col">Event End</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let event of events">
+            <td>{{ event.id }}</td>
+            <td>{{ event.title }}</td>
+            <td>{{ event.location }}</td>
+            <td>{{ event.startTime | date:'dd/MM/yyyy HH:mm a':'UTC' }}</td>
+            <td>{{ event.endTime | date:'dd/MM/yyyy HH:mm a':'UTC' }}</td>
+            
+            <td>
+              <div class="button-container">
+                <button class="neon-button" (click)="showDetails(event)">Details</button>
+                <button class="neon-button" (click)="deleteEvent(event)">Supprimer</button>
+                <button class="neon-button" [routerLink]="['/modifier', event.id]">Modifier</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

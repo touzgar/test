@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <table class="table table-striped table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Id </th>
+              <th scope="col">Nom Manager</th>
+              <th scope="col">Mail Manager</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let mag of manager">
+              <td>{{ mag.idManager }}</td>
+              <td>{{ mag.nameManager}}</td>
+              <td>{{ mag.mailManager }}</td>
+              
+               <td>
+                <div class="button-container">
+                  <button class="neon-button" (click)="showDetails(mag)">Details</button>
+                  <button class="neon-button" (click)="deleteManager(mag)">Supprimer</button>
+                    <button class="neon-button" [routerLink]="['/modifier-manager', mag.idManager]">Modifier</button>
+                </div>
+              </td>
+            </tr>  
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

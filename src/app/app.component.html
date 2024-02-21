@@ -1,0 +1,64 @@
+<!-- Add the Font Awesome stylesheet in your HTML (you can include it in your project or use a CDN) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" routerLink="#">Colandeer</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/calender">Calender</a>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" routerLink="#" id="navbardrop" data-toggle="dropdown">
+        Event <i class="fas fa-angle-down"></i>
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" routerLink="/create-event">Ajouter Event</a>
+        <a class="dropdown-item" routerLink="/lister">Lister Event</a>
+        <a class="dropdown-item" routerLink="/Search">Search Event</a>
+        <a class="dropdown-item" routerLink="/historique">Historique</a>
+      </div>
+    </li>    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" routerLink="#" id="navbardrop" data-toggle="dropdown">
+        Salle <i class="fas fa-angle-down"></i>
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" routerLink="/create-salle">Ajouter Salle</a>
+        <a class="dropdown-item" routerLink="/lister-salle">Lister Salle</a>
+        <a class="dropdown-item" routerLink="/salle-search">Search Salle</a>
+        <a class="dropdown-item" routerLink="/find-salle">Find Salle</a>
+         </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" routerLink="#" id="navbardrop" data-toggle="dropdown">
+        Empolyer <i class="fas fa-angle-down"></i>
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" routerLink="/create-empolyer">Ajouter Empolyer</a>
+        <a class="dropdown-item" routerLink="/lister-empolyer">Lister Empolyer</a>
+        <a class="dropdown-item" routerLink="/empolyer-search">Search Empolyer</a>
+        <a class="dropdown-item" routerLink="/avaible-empolyer">Avaible Empolyer</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" routerLink="#" id="navbardrop" data-toggle="dropdown">
+        Manager <i class="fas fa-angle-down"></i>
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" routerLink="/create-manager">Ajouter Manager</a>
+        <a class="dropdown-item" routerLink="/lister-manager">Lister Manager</a>
+        <a class="dropdown-item" routerLink="/search-manager">Search Manager</a>
+        <a class="dropdown-item" routerLink="/email-test">Send Email</a>
+        <a class="dropdown-item" routerLink="/test">Test</a>
+        
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
+

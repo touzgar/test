@@ -1,0 +1,32 @@
+/* calender.component.css */
+
+/* Add styles for the container and label */
+.container {
+  margin-top: 30px;
+  height: 50px;
+  width: 1080px;
+  margin-left: 180px;
+  background-color: #b9cde7;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-radius: 25px;
+}
+
+.label {
+  margin: 0;
+}
+
+/* Add styles for the calendar container */
+.calender-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Add styles for the event content */
+.fc-content {
+  font-weight: bold;
+  color: #333; /* Adjust the color as needed */
+}

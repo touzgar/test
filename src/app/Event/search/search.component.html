@@ -1,0 +1,39 @@
+   <form autocomplete="off" class="form-inline" >
+      <div class="form-group mx-sm-3 mb-2 mt-2">
+          <input class="form-control" (keyup)="onkeyUp(searchTerm.value)" #searchTerm id="nomEvent" placeholder="">
+          <label class="label" for="nomEvent" ><i class="fa fa-search" aria-hidden="true"></i>Nom Event</label>
+                   
+          
+      </div>
+  </form>
+  <div class="container">
+
+      <div class="card shadow mb-4">
+          <div class="card-body">
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th>Id</th>
+                          <th>Title</th>
+                          <th>Location</th>
+                          <th>StartTime</th>
+                          <th>EndTime</th>
+                         
+                      </tr>
+                  </thead>
+                  <tbody >
+                    <tr *ngFor="let event of events">
+                        <td>{{ event.id }}</td>
+                        <td>{{ event.title }}</td>
+                        <td>{{ event.location }}</td>
+                        <td>{{ event.startTime | date:'dd/MM/yyyy HH:mm a':'UTC' }}</td>
+                        <td>{{ event.endTime | date:'dd/MM/yyyy HH:mm a':'UTC' }}</td>
+                      
+                          
+  </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+  

@@ -1,0 +1,42 @@
+/* Set background color for even and odd rows in the table body */
+.table tbody tr:nth-child(even) {
+    background-color: #212529; /* Dark background color for even rows */
+  }
+  
+  .table tbody tr:nth-child(odd) {
+    background-color: #343a40; /* Slightly lighter background color for odd rows */
+  }
+  
+  /* Style for td elements */
+  .table td {
+    color: black;
+    padding: 12px;
+  }
+  
+  /* Hover effect on td elements */
+  .table tbody tr:hover td {
+    background-color: #28a745; /* Green background color on hover */
+    color: #fff;
+  }
+  
+  /* Style for th elements */
+  .table th {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Hover effect on th elements */
+  .table th:hover {
+    background-color: #28a745; /* Green background color on hover */
+    color: #fff;
+  }
+  
+  .card {
+    margin-top: 100px;
+    background-color: gainsboro;
+  }
+  .button-container {
+    display: flex;
+    gap: 10px; /* Adjust the spacing as needed */
+  }
+  

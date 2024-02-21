@@ -1,0 +1,37 @@
+<!-- find-salle-by-employee-count.component.html -->
+<div class="container">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+  
+<div>
+    <label for="numberOfEmployees">Number of Employees:</label>
+    <input type="number" id="numberOfEmployees" [(ngModel)]="numberOfEmployees" />
+  
+    <button (click)="searchByEmployeeCount()">Search</button>
+  
+    <!-- Display the list of salles in a table -->
+    <table class="table table-striped table-bordered" *ngIf="salleList.length > 0">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Salle Name</th>
+          <th scope="col">Capacity</th>
+          <!-- Add more table headers as needed based on your Salle model structure -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let salle of salleList">
+          <td>{{ salle.salleName }}</td>
+          <td>{{ salle.capacity }}</td>
+          <!-- Adjust the property names based on your Salle model structure -->
+        </tr>
+      </tbody>
+    </table>
+  
+    <div *ngIf="error">
+      <p>An error occurred: {{ error }}</p>
+    </div>
+  </div>
+      </div>
+    </div>
+    </div>
+    

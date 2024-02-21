@@ -1,0 +1,35 @@
+<div class="container">
+    <div>
+        <h2>Modifier un Event</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Event</label>
+            <input readonly  [(ngModel)]="currentEvent.id" type="text"  name="id" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Event</label>
+            <input type="text" [(ngModel)]="currentEvent.title"  name="title" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Location</label>
+            <input type="text" [(ngModel)]="currentEvent.location"  name="location" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date Start</label>
+            <input type="datetime"  [ngModel]="currentEvent.startTime | date:'yyyy-MM-dd HH:mm a':'UTC'"
+            (ngModelChange)="currentEvent.startTime=$event"   name="startTime" class="form-control">
+        </div>
+        
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Date End</label>
+            <input type="datetime"  [ngModel]="currentEvent.endTime | date:'yyyy-MM-dd HH:mm a':'UTC'"
+            (ngModelChange)="currentEvent.endTime=$event"  name="endTime" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="modifierEvent()" class="neon-button">Modifier</button>
+        </div> 
+
+
+            </form>
+</div>
