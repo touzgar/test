@@ -17,7 +17,7 @@ import { ListerEmpolyerComponent } from './Empolyer/lister-empolyer/lister-empol
 import { ModifierEmpolyerComponent } from './Empolyer/modifier-empolyer/modifier-empolyer.component';
 import { EmpolyerSearchComponent } from './Empolyer/empolyer-search/empolyer-search.component';
 import { AvaibleEmpolyerComponent } from './Empolyer/avaible-empolyer/avaible-empolyer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from './dialog/confirm-dialog/confirm-dialog.component';
@@ -40,6 +40,9 @@ import { ModifierManagerComponent } from './Manager/modifier-manager/modifier-ma
 import { EmailTestComponent } from './Manager/email-test/email-test.component';
 import { ToastrModule } from 'ngx-toastr';
 import { TestComponent } from './Manager/test/test.component';
+import { LoginComponent } from './login/login.component';
+import { ForbiddenComponent } from './gark/forbidden/forbidden.component';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,6 +74,9 @@ import { TestComponent } from './Manager/test/test.component';
     ModifierManagerComponent,
     EmailTestComponent,
     TestComponent,
+    LoginComponent,
+    ForbiddenComponent,
+    RegisterComponent,
    
   ],
   imports: [
@@ -85,6 +91,7 @@ import { TestComponent } from './Manager/test/test.component';
     MatInputModule,
     MatSnackBarModule,
     ToastrModule.forRoot(),
+    ReactiveFormsModule,
     
    
   ],

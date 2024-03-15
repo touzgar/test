@@ -7,6 +7,7 @@
 
   <!-- Links -->
   <ul class="navbar-nav">
+    <li><a class="nav-link">{{authService.loggedUser}}</a></li>
     <li class="nav-item">
       <a class="nav-link" routerLink="/calender">Calender</a>
     </li>
@@ -27,7 +28,7 @@
         Salle <i class="fas fa-angle-down"></i>
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" routerLink="/create-salle">Ajouter Salle</a>
+        <a class="dropdown-item" routerLink="/create-salle" *ngIf="authService.isAdmin()">Ajouter Salle</a>
         <a class="dropdown-item" routerLink="/lister-salle">Lister Salle</a>
         <a class="dropdown-item" routerLink="/salle-search">Search Salle</a>
         <a class="dropdown-item" routerLink="/find-salle">Find Salle</a>
@@ -54,8 +55,12 @@
         <a class="dropdown-item" routerLink="/search-manager">Search Manager</a>
         <a class="dropdown-item" routerLink="/email-test">Send Email</a>
         <a class="dropdown-item" routerLink="/test">Test</a>
+        <a *ngIf="!authService.isloggedIn" class="dropdown-item" routerLink="/login">Login</a>
+        <a  class="dropdown-item" routerLink="/logout" (click)="onLogout()">Logout</a>
+        
         
       </div>
+
     </li>
   </ul>
 </nav>

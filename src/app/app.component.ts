@@ -1,4 +1,6 @@
 import { Component, OnInit, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from './auth.service';
 
 
 @Component({
@@ -9,12 +11,15 @@ import { Component, OnInit, AfterViewInit, ElementRef, Renderer2 } from '@angula
 export class AppComponent implements OnInit {
  
   ngOnInit() {
+    this.authService.loadToken();
+    if(this.authService.getToken()==null || this.authService.isTokenExpired())
+    this.router.navigate(['login']);
     
   }
   private timeoutId: any; // Variable to store the timeout ID
 
   // Inject the necessary services
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2,public authService:AuthService,private router:Router) {}
 
   ngAfterViewInit() {
     // Enable hover for dropdowns
@@ -50,5 +55,8 @@ export class AppComponent implements OnInit {
   // Clear the timeout when the component is destroyed
   ngOnDestroy() {
     clearTimeout(this.timeoutId);
+  }
+  onLogout(){
+    this.authService.logout();
   }
 }
