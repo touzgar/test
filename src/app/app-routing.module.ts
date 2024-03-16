@@ -26,6 +26,7 @@ import { ListerSalleComponent } from './Salle/lister-salle/lister-salle.componen
 import { ModifierSalleComponent } from './Salle/modifier-salle/modifier-salle.component';
 import { SalleSearchComponent } from './Salle/salle-search/salle-search.component';
 import { UserGuard } from './userguard.guard';
+import { VerifEmailComponent } from './verif-email/verif-email.component';
 
 const routes: Routes = [
   {path:'create-event',component:CreateEventComponent,canActivate:[UserGuard]},
@@ -53,6 +54,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'app-forbidden',component:ForbiddenComponent},
   {path:'register',component:RegisterComponent},
+  {path:'verifEmail',component:VerifEmailComponent},
   { path: '', redirectTo: '/calender', pathMatch: 'full' },
 
 ];

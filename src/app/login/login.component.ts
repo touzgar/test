@@ -12,7 +12,7 @@ import { User } from '../model/User.model';
 export class LoginComponent implements OnInit {
   user: User = new User();
   err: number = 0; // Define erreur variable
-
+  message:string="login ou mot de passe erronés..";
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {}
@@ -26,6 +26,9 @@ export class LoginComponent implements OnInit {
       },
       error:(err:any)=>{
         this.err=1;
+        if (err.error.errorCause=="disabled")
+        this.message="l'utilisateur  est désactivé !"
+       
       }
     });  
   

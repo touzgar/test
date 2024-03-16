@@ -43,6 +43,7 @@ import { TestComponent } from './Manager/test/test.component';
 import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './gark/forbidden/forbidden.component';
 import { RegisterComponent } from './register/register.component';
+import { VerifEmailComponent } from './verif-email/verif-email.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,6 +78,7 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     ForbiddenComponent,
     RegisterComponent,
+    VerifEmailComponent,
    
   ],
   imports: [
